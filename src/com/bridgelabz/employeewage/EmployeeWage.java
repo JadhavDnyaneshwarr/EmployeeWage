@@ -7,8 +7,7 @@ public class EmployeeWage {
     static final int DAYS_PER_MONTH = 20;
     static final int HOURS_PER_MONTH = 100;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wage");
+    static void DailyPayment(){
         int hoursscount = 0;
         int monthlywage = 0;
         int day = 1;
@@ -41,5 +40,10 @@ public class EmployeeWage {
         System.out.println("Working days in month " + day);
         System.out.println("Working hours in month " + hoursscount);
         System.out.println("employee get the monthly wage is " + monthlywage);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage");
+        DailyPayment();
     }
 }
