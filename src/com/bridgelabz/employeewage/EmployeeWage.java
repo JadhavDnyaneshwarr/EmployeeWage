@@ -2,13 +2,13 @@ package com.bridgelabz.employeewage;
 
 public class EmployeeWage {
 
-    static int WAGE_PER_HOUR;
-    static int HOURS_PER_DAY;
-    static int PART_TIME_HOURS;
-    static int DAYS_PER_MONTH;
-    static int HOURS_PER_MONTH;
+    int WAGE_PER_HOUR;
+    int HOURS_PER_DAY;
+    int PART_TIME_HOURS;
+    int DAYS_PER_MONTH;
+    int HOURS_PER_MONTH;
 
-    static void empWageBuilder(){
+    void empWageBuilder(){
         int hoursCount = 0;
         int monthlyWage = 0;
         int day = 1;
@@ -41,28 +41,24 @@ public class EmployeeWage {
         System.out.println("Working hours in month " + hoursCount);
         System.out.println("employee get the monthly wage is " + monthlyWage);
     }
-    static void company1(){
-        System.out.println("Employee Wage of company 1");
-        WAGE_PER_HOUR = 30;
-        HOURS_PER_DAY = 9;
-        PART_TIME_HOURS = 5;
-        DAYS_PER_MONTH = 21;
-        HOURS_PER_MONTH = 189;
-        empWageBuilder();
-    }
-    static void company2(){
-        System.out.println("Employee Wage of company 2");
-        WAGE_PER_HOUR = 25;
-        HOURS_PER_DAY = 12;
-        PART_TIME_HOURS = 6;
-        DAYS_PER_MONTH = 24;
-        HOURS_PER_MONTH = 288;
-        empWageBuilder();
-    }
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage");
-        company1();
+        System.out.println("Total Employee wage of company1");
+        EmployeeWage company1 = new EmployeeWage();
+        company1.WAGE_PER_HOUR = 30;
+        company1.HOURS_PER_DAY = 9;
+        company1.PART_TIME_HOURS = 5;
+        company1.DAYS_PER_MONTH = 21;
+        company1.HOURS_PER_MONTH = 189;
+        company1.empWageBuilder();
         System.out.println();
-        company2();
+        System.out.println("Total Employee wage of company1");
+        EmployeeWage company2 = new EmployeeWage();
+        company2.WAGE_PER_HOUR = 25;
+        company2.HOURS_PER_DAY = 12;
+        company2.PART_TIME_HOURS = 6;
+        company2.DAYS_PER_MONTH = 24;
+        company2.HOURS_PER_MONTH = 288;
+        company2.empWageBuilder();
     }
 }
